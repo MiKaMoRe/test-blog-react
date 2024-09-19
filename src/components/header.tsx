@@ -18,7 +18,7 @@ export default function Header() {
         <Image
           src={"/logo.png"}
           alt="logo"
-          width={464}
+          width={400}
           height={400}
           className="w-16"
         />
