@@ -27,9 +27,9 @@ export default function Header() {
       <div className="flex basis-4/5 justify-end">
         <NavigationMenu className="">
           <NavigationMenuList>
-            <NavigationMenuItem>
-              <Link href="/" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+						<NavigationMenuItem>
+							<Link href="/" legacyBehavior passHref>
+								<NavigationMenuLink className={navigationMenuTriggerStyle()}>
 									Home
 								</NavigationMenuLink>
 							</Link>
