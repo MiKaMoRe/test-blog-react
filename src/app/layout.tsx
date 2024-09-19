@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import localFont from "next/font/local";
+import Header from "../components/header";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -35,7 +36,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="max-w-screen-2xl min-h-screen w-full">
+            <Header />
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>
