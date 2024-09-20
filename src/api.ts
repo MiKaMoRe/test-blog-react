@@ -10,3 +10,4 @@ const mock = new MockAdapter(api, { delayResponse: 1000 });
 
 mock.onGet("/posts", { params: { limit: 30, skip: 0 } }).reply(200, posts);
 mock.onGet("/posts", { params: { limit: 30, skip: 1 } }).reply(200, posts.slice(2));
+mock.onGet("/posts/post1").reply(200, posts[0]);

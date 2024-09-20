@@ -19,3 +19,22 @@ export const getAllPosts = async (
     status: response.status,
   };
 };
+
+export const getPost = async (
+  slug: string
+): Promise<TGetResponse<Post>> => {
+  const response = await api.get("/posts/" + slug);
+
+  if (response.status != 200) {
+    return {
+      data: null,
+      status: response.status,
+      message: "Error fetching posts",
+    };
+  }
+
+  return {
+    data: response.data,
+    status: response.status,
+  };
+};
